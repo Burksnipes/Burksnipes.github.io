@@ -17,8 +17,55 @@
 
   <!-- Position the map and title with Cascading Style Sheet (.css) -->
   <style>
-  body { margin:0; padding:0; }
+	  <div class="row">
+  <div class="column side">
+<h2><div class="dropdown">
+  <button onclick="myFunction1()" class="dropbtn">Guide</button>
+  <div id="myDropdown1" class="dropdown-content">
+    <font size="3">
+          This is the Apartment Guide Section
+      <br>This is the Apartment Guide Section
+      <br>This is the Apartment Guide Section
+      <br>This is the Apartment Guide Section
+      <br>This is the Apartment Guide Section
+    </font>
+  </div>
+  </div>
+<h2><div class="dropdown">
+  <button onclick="myFunction()" class="dropbtn">Reviews</button>
+  <div id="myDropdown" class="dropdown-content">
+    <font size="3">
+          This is the Apartment review Section
+      <br>This is the Apartment review Section
+      <br>This is the Apartment review Section
+      <br>This is the Apartment review Section
+      <br>This is the Apartment review Section
+    </font>
+  </div>
+  </div>
+  </div>
+  <div class="column middle">
+    <h1>Interactive Intern Apartment Map</h1>
+    <p>
+      <IMG SRC="https://cdn.rawgit.com/pointhi/leaflet-color-markers/master/img/marker-icon-green.png" ALT="some text" WIDTH=28 HEIGHT=36>: < $500
+      <IMG SRC="https://cdn.rawgit.com/pointhi/leaflet-color-markers/master/img/marker-icon-yellow.png" ALT="some text" WIDTH=28 HEIGHT=36>: < $700
+      <IMG SRC="https://cdn.rawgit.com/pointhi/leaflet-color-markers/master/img/marker-icon-orange.png" ALT="some text" WIDTH=28 HEIGHT=36>: < $900
+      <IMG SRC="https://cdn.rawgit.com/pointhi/leaflet-color-markers/master/img/marker-icon-red.png" ALT="some text" WIDTH=28 HEIGHT=36>: $1000+  
+    </p>
+  </div>
+  <div class="column side">
+    <h2><div class="dropdown">
+  <button onclick="myFunction1()" class="dropbtn">Dropdown</button>
+  <div id="myDropdown1" class="dropdown-content">
+    <a href="#">Link 1</a>
+    <a href="#">Link 2</a>
+    <a href="#">Link 3</a>
+  </div>
   
+  </div>
+</div>
+  body { margin:0; padding:0; }
+  #map { position: absolute; top:0; bottom:0; right:0; left:0; }
   </style>
 </head>
 <body>

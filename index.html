@@ -17,122 +17,16 @@
 
   <!-- Position the map and title with Cascading Style Sheet (.css) -->
   <style>
-  
-
-body {
-  margin: 0;
-}
-h1 {
-    color: green;
-}
-h1 {
-    text-align: center;
-}
-p {
-    text-align: center;
-}
-h2{
-    float:left;
-}
-
-
-/* Create three unequal columns that floats next to each other */
-.column {
-    float: left;
-    padding: 10px;
-}
-
-/* Left and right column */
-.column.side {
-    width: 25%;
-}
-
-/* Middle column */
-.column.middle {
-    width: 50%;
-}
-
-/* Clear floats after the columns */
-.row:after {
-    content: "";
-    display: table;
-    clear: both;
-}
-
-
-
-.dropdown {
-    position: relative;
-    display: inline-block;
-}
-
-.dropdown-content {
-    display: none;
-    position: absolute;
-    background-color: #f9f9f9;
-    min-width: 400%;
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-    padding: 12px 16px;
-    z-index: 9999;
-  
-}
-.dropdown a:hover {background-color: #f1f1f1}
-
-.show {display:block;}
-
-</style>
+  body { margin:0; padding:0; }
+  #map { position: absolute; top:0; bottom:0; right:0; left:0; }
+  #map-title { position: relative; margin-top: 10px; margin-left: 50px; float: left; background: white; border: 2px solid rgba(0,0,0,0.2); padding: 6px 8px; font-family: Helvetica; font-weight: bold; font-size: 24px; z-index: 800; }
+  </style>
 </head>
 <body>
 
   <!-- Display the map and title with HTML division tags  -->
-  <div class="row">
-  <div class="column side">
-<h2><div class="dropdown">
-  <button onclick="myFunction1()" class="dropbtn">Guide</button>
-  <div id="myDropdown1" class="dropdown-content">
-    <font size="3">
-          This is the Apartment Guide Section
-      <br>This is the Apartment Guide Section
-      <br>This is the Apartment Guide Section
-      <br>This is the Apartment Guide Section
-      <br>This is the Apartment Guide Section
-    </font>
-  </div>
-  </div>
-<h2><div class="dropdown">
-  <button onclick="myFunction()" class="dropbtn">Reviews</button>
-  <div id="myDropdown" class="dropdown-content">
-    <font size="3">
-          This is the Apartment review Section
-      <br>This is the Apartment review Section
-      <br>This is the Apartment review Section
-      <br>This is the Apartment review Section
-      <br>This is the Apartment review Section
-    </font>
-  </div>
-  </div>
-  </div>
-  <div class="column middle">
-    <h1>Interactive Intern Apartment Map</h1>
-    <p>
-      <IMG SRC="https://cdn.rawgit.com/pointhi/leaflet-color-markers/master/img/marker-icon-green.png" ALT="some text" WIDTH=28 HEIGHT=36>: < $500
-      <IMG SRC="https://cdn.rawgit.com/pointhi/leaflet-color-markers/master/img/marker-icon-yellow.png" ALT="some text" WIDTH=28 HEIGHT=36>: < $700
-      <IMG SRC="https://cdn.rawgit.com/pointhi/leaflet-color-markers/master/img/marker-icon-orange.png" ALT="some text" WIDTH=28 HEIGHT=36>: < $900
-      <IMG SRC="https://cdn.rawgit.com/pointhi/leaflet-color-markers/master/img/marker-icon-red.png" ALT="some text" WIDTH=28 HEIGHT=36>: $1000+  
-    </p>
-  </div>
-  <div class="column side">
-    <h2><div class="dropdown">
-  <button onclick="myFunction1()" class="dropbtn">Dropdown</button>
-  <div id="myDropdown1" class="dropdown-content">
-    <a href="#">Link 1</a>
-    <a href="#">Link 2</a>
-    <a href="#">Link 3</a>
-  </div>
-  
-  </div>
-</div>
-	<div id="map"></div>
+  <div id="map-title">EDIT your map title</div>
+  <div id="map"></div>
 
   <!-- Create the map content with JavaScript (.js) -->
   <script>

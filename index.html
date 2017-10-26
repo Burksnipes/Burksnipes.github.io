@@ -1016,7 +1016,7 @@ var busmap = {
    var runLayer = omnivore.csv('data.csv', null, customLayer)
    .on('ready', function() {
     map.fitBounds(runLayer.getBounds());
-   })
+   });
 
         
         L.control.layers(TileLayer,null,{collapsed:false}).addTo(map);

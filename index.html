@@ -988,6 +988,17 @@ var geojsonFeature = {
     }
   ]
 }
+
+/* Upload Latitude/Longitude markers from data.csv file, show Title in pop-up, and override initial center and zoom to fit all in map */
+   var customLayer = L.geoJson(null, {
+    onEachFeature: function(feature, layer) {
+      layer.bindPopup(feature.properties.Title);
+    }
+   });
+   var runLayer = omnivore.csv('data.csv', null, customLayer)
+   .on('ready', function());
+	  
+	  
 var baselayMaps = {
     "One Bed One Bath": OneBOneB.addTo(map),
     "Two Bed One Bath": TwoBOneB,
@@ -1002,26 +1013,18 @@ var bus = L.layerGroup([json,Bus1,Bus2,Bus3,Bus4]);
 var off = L.layerGroup([]);
 var busmap = {
     "Bus Stops": bus,
-    "Landmarks": landmarks
+    "Landmarks": landmarks,
+    "Data": customLayer
 
     
    
 };
-/* Upload Latitude/Longitude markers from data.csv file, show Title in pop-up, and override initial center and zoom to fit all in map */
-   var customLayer = L.geoJson(null, {
-    onEachFeature: function(feature, layer) {
-      layer.bindPopup(feature.properties.Title);
-    }
-   });
-   var runLayer = omnivore.csv('data.csv', null, customLayer)
-   .on('ready', function() {
-    map.fitBounds(runLayer.getBounds());
-   }).addTo(map);
+
  
 
         
         L.control.layers(TileLayer,null,{collapsed:false}).addTo(map);
-        L.control.layers(baselayMaps,busmap,customLayer,{collapsed:false}).addTo(map);
+        L.control.layers(baselayMaps,busmap,{collapsed:false}).addTo(map);
         
 
 /* When the user clicks on the button, 

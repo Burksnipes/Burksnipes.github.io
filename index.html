@@ -996,7 +996,9 @@ var geojsonFeature = {
     }
    });
    var runLayer = omnivore.csv('data.csv', null, customLayer)
-   .on('ready', function());
+   .on('ready', function(){
+    map.fitBounds(runLayer.getBounds());
+   });
 	  
 	  
 var baselayMaps = {

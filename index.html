@@ -997,7 +997,7 @@ var geojsonFeature = {
    });
    var runLayer = omnivore.csv('data.csv', null, customLayer)
    .on('ready', function(){
-    map.fitBounds(runLayer.getBounds());
+    return true;
    });
 	  
 	  
@@ -1067,11 +1067,7 @@ window.onclick = function(event) {
     }
   }
 }
-var map = L.map( 'map', {
-    center: [35.9522, -84.0500],
-    minZoom: 2,
-    zoom: 11
-});
+
   </script>
 </body>
 </html>

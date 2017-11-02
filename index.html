@@ -931,11 +931,15 @@ var geojsonFeature = {
       layer.bindPopup(feature.properties.Title + "<br>Hi");
     }
    });
-   var runLayer = omnivore.csv('data.csv', null, customLayer)
+   var runLayer = omnivore.csv('data.csv', {icon: orangeIcon}, customLayer)
    .on('ready', function(){
     return true;
    });
-   omnivore.geojson('Test.geojson.txt').addTo(map);  
+var points = omnivore.geojson('Test.geojson.txt').addTo(map); 
+	  
+	  
+	  
+	  
 	  
 var baselayMaps = {
     "One Bed One Bath": OneBOneB.addTo(map),

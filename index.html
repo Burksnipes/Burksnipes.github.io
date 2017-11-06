@@ -902,8 +902,11 @@ var geojsonFeature = {
    var customLayer = L.geoJson(null, {
     onEachFeature: function(feature, layer) {
 	    if(feature.properties.Drive == 20)
-		return {marker.setIcon(orangeIcon)};
+		//return {marker.setIcon(orangeIcon)};
       layer.bindPopup("<b>" + feature.properties.Title + "<br>Drive " + feature.properties.Drive + " Min" + "<br>Price: " + feature.properties.Price + "<br><a href=" + feature.properties.Link + ">Website Link</a>");
+    }
+	   style: function(feature) {
+        return { color: '#f00' };
     }
    });
    var runLayer = omnivore.csv('Apatment.csv', null, customLayer)

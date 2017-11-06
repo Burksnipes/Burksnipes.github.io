@@ -900,7 +900,7 @@ var geojsonFeature = {
 /* Upload Latitude/Longitude markers from data.csv file, show Title in pop-up, and override initial center and zoom to fit all in map */
    var customLayer = L.geoJson(null, {
     onEachFeature: function(feature, layer) {
-      layer.bindPopup("<p>" + feature.properties.Title + "<br>Drive " + feature.properties.Drive + " Min" + "<br>Price: " + feature.properties.Price + "<br><a href=" + feature.properties.Link + ">Website Link</a>");
+      layer.bindPopup("<b>" + feature.properties.Title + "<br>Drive " + feature.properties.Drive + " Min" + "<br>Price: " + feature.properties.Price + "<br><a href=" + feature.properties.Link + ">Website Link</a>");
     }
    });
    var runLayer = omnivore.csv('Apatment.csv', null, customLayer)

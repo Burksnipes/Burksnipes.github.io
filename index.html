@@ -900,7 +900,13 @@ var geojsonFeature = {
 /* Upload Latitude/Longitude markers from data.csv file, show Title in pop-up, and override initial center and zoom to fit all in map */
    var customLayer = L.geoJson(null, {
     onEachFeature: function(feature, layer) {
-	    if(feature.properties.Drive == 20)
+	    if(feature.properties.Price == "Mid-High")
+		marker.setIcon(L.icon({
+                iconUrl: 'https://cdn.rawgit.com/pointhi/leaflet-color-markers/master/img/marker-icon-2x-orange.png',
+        	iconSize: [30, 50], // size of the icon
+        	iconAnchor: [16,48],
+       	 	popupAnchor: [-1,-34]
+        		});
       layer.bindPopup("<b>" + feature.properties.Title + "<br>Drive " + feature.properties.Drive + " Min" + "<br>Price: " + feature.properties.Price + "<br><a href=" + feature.properties.Link + ">Website Link</a>");
     }
    });

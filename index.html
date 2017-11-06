@@ -903,7 +903,7 @@ var geojsonFeature = {
       layer.bindPopup(feature.properties.Title + "<br>Drive " + feature.properties.Drive + "<br>Price: " + feature.properties.Price);
     }
    });
-   var runLayer = omnivore.csv('data.csv', null, customLayer)
+   var runLayer = omnivore.csv('Apatment.csv', null, customLayer)
    .on('ready', function(){
     return true;
    });

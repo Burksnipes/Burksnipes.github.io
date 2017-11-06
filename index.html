@@ -908,7 +908,7 @@ var geojsonFeature = {
    var runLayer = omnivore.csv('Apatment.csv', null, customLayer)
    .on('ready', function(){
     this.eachLayer(function(marker) {
-            if (marker.toGeoJSON().properties.Price === 'Mid-High') {
+            if (marker.toGeoJSON().properties.Drive == 20) {
                 // The argument to L.mapbox.marker.icon is based on the
                 // simplestyle-spec: see that specification for a full
                 // description of options.

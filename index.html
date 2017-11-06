@@ -898,7 +898,8 @@ var geojsonFeature = {
   ]
 }
 /* Upload Latitude/Longitude markers from data.csv file, show Title in pop-up, and override initial center and zoom to fit all in map */
-   var customLayer = L.geoJson(null, {
+   /*
+var customLayer = L.geoJson(null, {
     onEachFeature: function(feature, layer) {
 	    if(feature.properties.Drive == 20)
 		//marker.setIcon(orangeIcon)
@@ -931,7 +932,32 @@ var geojsonFeature = {
         'marker-symbol': 'airport',
         'marker-color': '59245f'
     });
-	*/	  
+	*/
+*/
+omnivore.csv('Apatment.csv')
+    .on('ready', function(layer) {
+        // An example of customizing marker styles based on an attribute.
+        // In this case, the data, a CSV file, has a column called 'state'
+        // with values referring to states. Your data might have different
+        // values, so adjust to fit.
+        this.eachLayer(function(marker) {
+            if (marker.properties.Drive == 20) {
+                // The argument to L.mapbox.marker.icon is based on the
+                // simplestyle-spec: see that specification for a full
+                // description of options.
+                marker.setIcon(L.mapbox.marker.icon({
+                    'marker-color': '#ff8888',
+                    'marker-size': 'large'
+                }));
+            } else {
+                marker.setIcon(L.mapbox.marker.icon({}));
+            }
+            // Bind a popup to each icon based on the same properties
+            //marker.bindPopup(marker.toGeoJSON().properties.city + ', ' +
+             //   marker.properties.Drive);
+        });
+    })
+    .addTo(map);
 var baselayMaps = {
     "One Bed One Bath": OneBOneB.addTo(map),
     "Two Bed One Bath": TwoBOneB,

@@ -934,14 +934,14 @@ var customLayer = L.geoJson(null, {
     });
 	*/
 */
-omnivore.csv('/mapbox.js/assets/data/airports.csv')
+omnivore.csv('Apatment.csv')
     .on('ready', function(layer) {
         // An example of customizing marker styles based on an attribute.
         // In this case, the data, a CSV file, has a column called 'state'
         // with values referring to states. Your data might have different
         // values, so adjust to fit.
         this.eachLayer(function(marker) {
-            if (marker.toGeoJSON().properties.state === 'CA') {
+            if (marker.toGeoJSON().properties.Drive === 20) {
                 // The argument to L.mapbox.marker.icon is based on the
                 // simplestyle-spec: see that specification for a full
                 // description of options.
@@ -953,8 +953,8 @@ omnivore.csv('/mapbox.js/assets/data/airports.csv')
                 marker.setIcon(L.mapbox.marker.icon({}));
             }
             // Bind a popup to each icon based on the same properties
-            marker.bindPopup(marker.toGeoJSON().properties.city + ', ' +
-                marker.toGeoJSON().properties.state);
+            marker.bindPopup(marker.toGeoJSON().properties.Drive + ', ' +
+                marker.toGeoJSON().properties.Drive);
         });
     })
     .addTo(map);

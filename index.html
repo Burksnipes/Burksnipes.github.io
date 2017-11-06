@@ -188,8 +188,8 @@ var Y12Logo = L.icon({
         popupAnchor: [0,-15]
         });
 
-   // var Centennial = L.marker([35.9987, -84.1933], {icon: orangeIcon})  
-    var ThePreserve = L.marker([35.9522, -84.1668], {icon: orangeIcon})
+    var Centennial = L.marker([35.9987, -84.1933], {icon: orangeIcon})  
+    ThePreserve = L.marker([35.9522, -84.1668], {icon: orangeIcon})
     LondonTown = L.marker([35.9385, -84.0117], {icon: yellowIcon})
     MarbleAlley = L.marker([35.9672, -83.9176], {icon: redIcon})
     TaraHills = L.marker([36.0186, -84.2292], {icon: yellowIcon})
@@ -903,7 +903,7 @@ var geojsonFeature = {
       layer.bindPopup(feature.properties.Title + "<br>Drive " + feature.properties.Drive + "<br>Price: " + feature.properties.Price);
     }
    });
-   var runLayer = omnivore.csv('Apartment.csv', null, customLayer)
+   var runLayer = omnivore.csv('data.csv', null, customLayer)
    .on('ready', function(){
     return true;
    });

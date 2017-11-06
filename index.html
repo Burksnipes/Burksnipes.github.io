@@ -910,9 +910,8 @@ var geojsonFeature = {
    .on('ready', function(){
     this.eachLayer(function(marker) {
         return true;
-    }
    });
-   omnivore.geojson('Test.geojson.txt').addTo(map);   
+   omnivore.geojson('Test.geojson.txt').addTo(map); 
 	/*
     var points = omnivore.csv('airports.csv', {
     icon: L.mapbox.marker.icon({

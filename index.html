@@ -904,23 +904,7 @@ var geojsonFeature = {
    });
    var runLayer = omnivore.csv('Apatment.csv', null, customLayer)
    .on('ready', function(){
-	    this.eachLayer(function(marker) {
-            if (marker.toGeoJSON().properties.state === 'Mid-High') {
-                // The argument to L.mapbox.marker.icon is based on the
-                // simplestyle-spec: see that specification for a full
-                // description of options.
-                marker.setIcon(L.mapbox.marker.icon({
-                    'marker-color': '#ff8888',
-                    'marker-size': 'large'
-                }));
-            } else {
-                marker.setIcon(L.mapbox.marker.icon({}));
-            }
-            // Bind a popup to each icon based on the same properties
-            marker.bindPopup(marker.toGeoJSON().properties.city + ', ' +
-                marker.toGeoJSON().properties.state);
-        });
-    })
+	    return true;
    });
    omnivore.geojson('Test.geojson.txt').addTo(map);  
 	/*

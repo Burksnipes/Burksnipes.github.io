@@ -909,15 +909,7 @@ var geojsonFeature = {
    var runLayer = omnivore.csv('Apatment.csv', null, customLayer)
    .on('ready', function(){
     this.eachLayer(function(marker) {
-        if (marker.toGeoJSON().properties.Drive == 20) {
-            marker.setIcon(L.icon({
-                iconSize: [18, 18],
-                iconAnchor: [9, 27],
-                popupAnchor: [1, -24],
-                iconUrl: 'http://freevector.co/wp-content/uploads/2010/10/47054-turkey-bird-shape-from-side-view.png'
-            }));
-
-        }
+        return true;
    });
    omnivore.geojson('Test.geojson.txt').addTo(map);   
 	/*

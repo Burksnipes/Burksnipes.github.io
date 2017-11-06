@@ -905,19 +905,19 @@ var geojsonFeature = {
       layer.bindPopup("<b>" + feature.properties.Title + "<br>Drive " + feature.properties.Drive + " Min" + "<br>Price: " + feature.properties.Price + "<br><a href=" + feature.properties.Link + ">Website Link</a>");
     }
    });
-   var runLayer = omnivore.csv('Apatment.csv', null, customLayer)
+   omnivore.csv('Apatment.csv')
    .on('ready', function(){
-    this.eachLayer(function(marker) {
-            if (marker.toGeoJSON().properties.Drive == 20) {
+    this.eachLayer(function(feature) {
+            if (feature.properties.Drive == 20) {
                 // The argument to L.mapbox.marker.icon is based on the
                 // simplestyle-spec: see that specification for a full
                 // description of options.
-                marker.setIcon(L.mapbox.marker.icon({
+                feature.setIcon(L.mapbox.marker.icon({
                     'marker-color': '#ff8888',
                     'marker-size': 'large'
                 }));
             } else {
-                marker.setIcon(L.mapbox.marker.icon({}));
+                feature.setIcon(L.mapbox.marker.icon({}));
             }
             // Bind a popup to each icon based on the same properties
             //marker.bindPopup(marker.toGeoJSON().properties.city + ', ' +

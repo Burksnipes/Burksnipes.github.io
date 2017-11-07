@@ -963,7 +963,7 @@ var runLayer = omnivore.csv('Apatment.csv')
         'marker-color': '59245f'
     });
 	*/
-var Summer1 = L.layerGroup(list[0],list[1]);
+var Summer1 = L.layerGroup([list[0],list[1]]);
 var baselayMaps = {
     "One Bed One Bath": OneBOneB.addTo(map),
     "Two Bed One Bath": TwoBOneB,

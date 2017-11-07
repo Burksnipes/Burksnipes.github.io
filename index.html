@@ -932,7 +932,7 @@ var runLayer = omnivore.csv('Apatment.csv')
             }));
         }
 
-      return marker.bindPopup("<b>" + feature.properties.Title + "<br>Drive " + feature.properties.Drive + " Min" + "<br>Price: " + feature.properties.Price + "<br><a href=" + feature.properties.Link + ">Website Link</a>");
+      return marker.bindPopup("<b>" + marker.properties.Title + "<br>Drive " + marker.properties.Drive + " Min" + "<br>Price: " + marker.properties.Price + "<br><a href=" + marker.properties.Link + ">Website Link</a>");
     });
 }).addTo(map);
    omnivore.geojson('Test.geojson.txt').addTo(map); 

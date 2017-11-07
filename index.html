@@ -911,38 +911,21 @@ var geojsonFeature = {
     return true;
    });
    */
-var runLayer = omnivore.csv('Apatment.csv')
+var runLayer = omnivore.csv('myPoints.csv')
     .on('ready', function(layer) {
     markerArray = [];
     this.eachLayer(function(marker) {
-        if (marker.toGeoJSON().properties.Price == 'Mid-High') {
-            marker.L.icon({
-        iconUrl: 'https://cdn.rawgit.com/pointhi/leaflet-color-markers/master/img/marker-icon-2x-orange.png',
-        iconSize: [35, 40], // size of the icon
-        iconAnchor: [16,48],
-        popupAnchor: [-1,-34]
-        });
-
-        }
-        else if (marker.toGeoJSON().properties.Price == 'Mid-High' ) {
+        if (marker.toGeoJSON().properties.Price == "Mid-High") {
             marker.setIcon(L.icon({
-                iconSize: [35, 40],
+                iconSize: [18, 18],
                 iconAnchor: [9, 27],
                 popupAnchor: [1, -24],
                 iconUrl: 'https://cdn.rawgit.com/pointhi/leaflet-color-markers/master/img/marker-icon-2x-orange.png'
             }));
-
         }
-        else {
-            marker.setIcon(L.icon({
-                iconSize: [0],
-                iconAnchor: [0],
-                popupAnchor: [0],
-                iconUrl: 'https://cdn.rawgit.com/pointhi/leaflet-color-markers/master/img/marker-icon-2x-red.png'
-            }))}
 
-      return marker.bindPopup(marker.toGeoJSON().properties.Drive + ', ' +
-                marker.toGeoJSON().properties.Drive);  
+      return marker.bindPopup(marker.toGeoJSON().properties.Category + ', ' +
+                marker.toGeoJSON().properties.Location);  
     });
 }).addTo(map);
    omnivore.geojson('Test.geojson.txt').addTo(map); 

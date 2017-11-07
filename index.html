@@ -915,10 +915,10 @@ var runLayer = omnivore.csv('Apatment.csv')
     .on('ready', function(layer) {
     markerArray = [];
     this.eachLayer(function(marker) {
-        if (marker.toGeoJSON().properties.Drive == 15) {
+        if (marker.toGeoJSON().properties.Price == 'High') {
             marker.setIcon(L.icon({
                 iconSize: [30, 50],
-                //iconAnchor: [9, 27],
+                iconAnchor: [16,48],
                 popupAnchor: [0,-15],
                 iconUrl: 'https://cdn.rawgit.com/pointhi/leaflet-color-markers/master/img/marker-icon-2x-red.png'
             }));
@@ -926,9 +926,25 @@ var runLayer = omnivore.csv('Apatment.csv')
 	if (marker.toGeoJSON().properties.Price == 'Mid-High') {
             marker.setIcon(L.icon({
                 iconSize: [30, 50],
-                //iconAnchor: [9, 27],
+                iconAnchor: [16,48],
                 popupAnchor: [0,-15],
                 iconUrl: 'https://cdn.rawgit.com/pointhi/leaflet-color-markers/master/img/marker-icon-2x-orange.png'
+            }));
+        }
+	if (marker.toGeoJSON().properties.Price == 'Mid-Low') {
+            marker.setIcon(L.icon({
+                iconSize: [30, 50],
+                iconAnchor: [16,48],
+                popupAnchor: [0,-15],
+                iconUrl: 'https://cdn.rawgit.com/pointhi/leaflet-color-markers/master/img/marker-icon-2x-yellow.png'
+            }));
+        }
+	if (marker.toGeoJSON().properties.Price == 'Low') {
+            marker.setIcon(L.icon({
+                iconSize: [30, 50],
+                iconAnchor: [16,48],
+                popupAnchor: [0,-15],
+                iconUrl: 'https://cdn.rawgit.com/pointhi/leaflet-color-markers/master/img/marker-icon-2x-green.png'
             }));
         }
 

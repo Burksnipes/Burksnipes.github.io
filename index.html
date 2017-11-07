@@ -906,16 +906,15 @@ var geojsonFeature = {
       layer.bindPopup("<b>" + feature.properties.Title + "<br>Drive " + feature.properties.Drive + " Min" + "<br>Price: " + feature.properties.Price + "<br><a href=" + feature.properties.Link + ">Website Link</a>");
     }
    });
+      var runLayer = omnivore.csv('Apatment.csv', null, customLayer)
+   .on('ready', function(){
+    return true;
+   });
    */
    var customLayer = L.geoJson(null, {
     onEachFeature: function(feature, layer) {
 	    if(feature.properties.Drive == 20){
-		    layer.setIcon(L.icon({
-        iconUrl: 'https://cdn.rawgit.com/pointhi/leaflet-color-markers/master/img/marker-icon-2x-orange.png',
-        iconSize: [30, 50], // size of the icon
-        iconAnchor: [16,48],
-        popupAnchor: [-1,-34]
-        });
+		    
       		    layer.bindPopup("<b>" + feature.properties.Title + "<br>Drive " + feature.properties.Drive + " Min" + "<br>Price: " + feature.properties.Price + "<br><a href=" + feature.properties.Link + ">Website Link</a>");
     }
     }
@@ -925,7 +924,17 @@ var geojsonFeature = {
 
    var runLayer = omnivore.csv('Apatment.csv', null, customLayer)
    .on('ready', function(){
-    return true;
+    this.eachLayer(function(marker) {
+        if (marker.toGeoJSON().properties.Drive == 20) {
+            marker.setIcon(L.icon({
+                iconSize: [18, 18],
+                iconAnchor: [9, 27],
+                popupAnchor: [1, -24],
+                iconUrl: 'https://www.todocanada.ca/wp-content/uploads/noun_13641.png'
+            }));
+	return marker.bindPopup("hi");
+        }
+    }
    });
    omnivore.geojson('Test.geojson.txt').addTo(map); 
 	/*

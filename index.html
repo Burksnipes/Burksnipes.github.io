@@ -911,6 +911,7 @@ var geojsonFeature = {
     return true;
    });
    */
+var list = [];
 var runLayer = omnivore.csv('Apatment.csv')
     .on('ready', function(layer) {
     markerArray = [];
@@ -922,6 +923,7 @@ var runLayer = omnivore.csv('Apatment.csv')
                 popupAnchor: [-1,-34],
                 iconUrl: 'https://cdn.rawgit.com/pointhi/leaflet-color-markers/master/img/marker-icon-2x-red.png'
             }));
+		list.push(marker)
 
         }
 	if (marker.toGeoJSON().properties.Price == 'Mid-High') {
@@ -961,11 +963,12 @@ var runLayer = omnivore.csv('Apatment.csv')
         'marker-color': '59245f'
     });
 	*/
+var Summer1 = L.layerGroup(list[0],list[1]);
 var baselayMaps = {
     "One Bed One Bath": OneBOneB.addTo(map),
     "Two Bed One Bath": TwoBOneB,
     "Two Bed Two Bath": TwoBTwoB,
-    "Summer Housing": Summer,
+    "Summer Housing": Summer1,
     "Off": off
 };
         

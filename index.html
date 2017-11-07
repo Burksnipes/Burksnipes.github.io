@@ -915,7 +915,7 @@ var runLayer = omnivore.csv('myPoints.csv')
     .on('ready', function(layer) {
     markerArray = [];
     this.eachLayer(function(marker) {
-        if (marker.toGeoJSON().properties.Price == "Mid-High") {
+        if (marker.toGeoJSON().properties.Drive == 20) {
             marker.setIcon(L.icon({
                 iconSize: [18, 18],
                 iconAnchor: [9, 27],

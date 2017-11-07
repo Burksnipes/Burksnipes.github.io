@@ -915,14 +915,31 @@ var runLayer = omnivore.csv('myPoints.csv')
     .on('ready', function(layer) {
     markerArray = [];
     this.eachLayer(function(marker) {
-        if (marker.toGeoJSON().properties.Drive == 20) {
+        if (marker.toGeoJSON().properties.Drive == 15) {
             marker.setIcon(L.icon({
                 iconSize: [18, 18],
                 iconAnchor: [9, 27],
                 popupAnchor: [1, -24],
-                iconUrl: 'https://cdn.rawgit.com/pointhi/leaflet-color-markers/master/img/marker-icon-2x-orange.png'
+                iconUrl: 'https://cdn.rawgit.com/pointhi/leaflet-color-markers/master/img/marker-icon-2x-red.png'
             }));
+
         }
+        else if (marker.toGeoJSON().properties.Drive == 20 ) {
+            marker.setIcon(L.icon({
+                iconSize: [18, 18],
+                iconAnchor: [9, 27],
+                popupAnchor: [1, -24],
+                iconUrl: 'https://cdn.rawgit.com/pointhi/leaflet-color-markers/master/img/marker-icon-2x-red.png'
+            }));
+
+        }
+        else {
+            marker.setIcon(L.icon({
+                iconSize: [0],
+                iconAnchor: [0],
+                popupAnchor: [0],
+                iconUrl: 'https://cdn.rawgit.com/pointhi/leaflet-color-markers/master/img/marker-icon-2x-red.png'
+            }))}
 
       return marker.bindPopup(marker.toGeoJSON().properties.Category + ', ' +
                 marker.toGeoJSON().properties.Location);  

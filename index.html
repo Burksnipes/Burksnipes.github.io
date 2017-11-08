@@ -187,8 +187,9 @@ var Y12Logo = L.icon({
         iconSize: [50, 50], // size of the icon
         popupAnchor: [0,-15]
         });
-    var Centennial = L.marker([35.9987, -84.1933], {icon: orangeIcon})
-    ThePreserve = L.marker([35.9522, -84.1668], {icon: orangeIcon})
+	  
+    var Centennial = L.marker([35.9987, -84.1933], {icon: orangeIcon})  
+    //ThePreserve = L.marker([35.9522, -84.1668], {icon: orangeIcon})
     LondonTown = L.marker([35.9385, -84.0117], {icon: yellowIcon})
     MarbleAlley = L.marker([35.9672, -83.9176], {icon: redIcon})
     TaraHills = L.marker([36.0186, -84.2292], {icon: yellowIcon})
@@ -206,7 +207,7 @@ var Y12Logo = L.icon({
     Landings = L.marker([35.964759, -83.906194], {icon: orangeIcon})
     FourOneFour = L.marker([35.943445, -83.983993], {icon: redIcon})
     MountainBrook = L.marker([35.951533, -83.974550], {icon: orangeIcon})
-    EightOneOne = L.marker([35.966777, -83.906251], {icon: redIcon})	  
+    EightOneOne = L.marker([35.966777, -83.906251], {icon: redIcon})
     TheStandard = L.marker([35.957020, -83.933028], {icon: greenIcon})
     TheKnox = L.marker([35.959649, -83.930202], {icon: greenIcon})
     TheCommons = L.marker([35.961757, -83.934871], {icon: greenIcon})
@@ -233,6 +234,7 @@ var Y12Logo = L.icon({
     Bus3 = L.marker([35.958094, -83.928241], {icon: greyIcon})
     Bus4 = L.marker([35.931136, -84.310881], {icon: greyIcon})
     
+    
 Centennial.bindPopup("<b>Centennial Village</b><br>Drive: 15 min<br>Price: Mid High<br><a href=http://www.centennialvillageapts.com>Website Link</a>");
 ThePreserve.bindPopup("<b>The Preserve</b><br>Drive: 20 min<br>Price: Mid High<br><a href=http://thepreserveathardinvalley.com>Website Link</a>");
 LondonTown.bindPopup("<b>LondonTown</b><br>Drive: 30 min<br>Price: Mid Low<br><a href=http://bacorealtycorp.com/816/londontown-apartments-apartments-for-rent/knoxville/37909>Website Link</a>");
@@ -253,7 +255,6 @@ Landings.bindPopup("<b>The Landings</b><br>Drive: 35 min<br>Price: Mid High<br><
 FourOneFour.bindPopup("<b>414 Flats</b><br>Drive: 30 min<br>Price: High<br><a href=http://www.414flats.com>Website Link</a>");
 MountainBrook.bindPopup("<b>Mountain Brook</b><br>Drive: 30 min<br>Price: Mid High<br><a href=http://mountainbrook-knoxville.com>Website Link</a>");
 EightOneOne.bindPopup("<b>811 Apartments</b><br>Drive: 35 min<br>Price: High<br><a href=https://www.live811eastdowntown.com>Website Link</a>");
-    
 TheStandard.bindPopup("<b>The Standard</b><br>Drive: 35 min<br>Price: Mid Low<br>Sublease only<br><a href=https://www.thestandardatknoxville.com>Website Link</a>");
 TheKnox.bindPopup("<b>The Knox</b><br>Drive: 35 min<br>Price: Mid Low<br>Sublease only<br><a href=http://livetheknox.com>Website Link</a>");
 TheCommons.bindPopup("<b>The Commons</b><br>Drive: 35 min<br>Price: Mid Low<br>Sublease only<br><a href=http://www.commonsatknoxville.com>Website Link</a>");
@@ -985,7 +986,6 @@ var runLayer = omnivore.csv('Apatment.csv')
 			TwoBTwoB.addLayer(marker);	
 		}
         }
-
          return marker.bindPopup("<b>" + marker.toGeoJSON().properties.Title + "<br>Drive " +
                                  marker.toGeoJSON().properties.Drive + " Min" + "<br>Price: " + marker.toGeoJSON().properties.Price + "<br><a href=" + marker.toGeoJSON().properties.Link + ">Website Link</a>"); 
     });

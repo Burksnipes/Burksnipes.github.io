@@ -940,7 +940,9 @@ var runLayer = omnivore.csv('Apatment.csv')
                 popupAnchor: [-1,-34],
                 iconUrl: 'https://cdn.rawgit.com/pointhi/leaflet-color-markers/master/img/marker-icon-2x-orange.png'
             }));
-		
+		if (marker.toGeoJSON().properties.OneBOneB == 'y'){
+			OneBOneB.addLayer(marker);
+		}
         }
 	if (marker.toGeoJSON().properties.Price == 'Mid-Low') {
             marker.setIcon(L.icon({

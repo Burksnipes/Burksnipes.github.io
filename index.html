@@ -991,7 +991,7 @@ var runLayer = omnivore.csv('Apatment.csv')
          return marker.bindPopup("<b>" + marker.toGeoJSON().properties.Title + "<br>Drive " +
                                  marker.toGeoJSON().properties.Drive + " Min" + "<br>Price: " + marker.toGeoJSON().properties.Price + "<br><a href=" + marker.toGeoJSON().properties.Link + ">Website Link</a>"); 
     });
-}).addTo(map);
+});
    omnivore.geojson('Test.geojson.txt').addTo(map); 
 	/*
     var points = omnivore.csv('airports.csv', {

@@ -187,6 +187,11 @@ var Y12Logo = L.icon({
         iconSize: [50, 50], // size of the icon
         popupAnchor: [0,-15]
         });
+var InfoIcon = L.icon({
+        iconUrl: 'https://cdn4.iconfinder.com/data/icons/meBaze-Freebies/512/info.png',
+        iconSize: [50, 50], // size of the icon
+        popupAnchor: [0,-15]
+        });
 	  
     var Centennial = L.marker([35.9987, -84.1933], {icon: orangeIcon})  
     ThePreserve = L.marker([35.9522, -84.1668], {icon: orangeIcon})
@@ -215,7 +220,7 @@ var Y12Logo = L.icon({
     TheTower = L.marker([35.952795, -83.944501], {icon: greenIcon})
     TheBridge = L.marker([35.962404, -83.926805], {icon: greenIcon})
     
-    Tester = L.marker([37.0123, -84.2515], {icon: greenIcon})
+    Tester = L.marker([35.98603, -84.083787], {icon: InfoIcon})
     
     MarketSquare = L.marker([35.964824, -83.919300], {icon: marketIcon})
     SolwayBridge = L.marker([35.991468, -84.194734], {icon: TrafficIcon})
@@ -266,13 +271,13 @@ Bus3.bindPopup("<b>Cumberland Ave. @ James Agee St.<br>6:50am<br>12:00pm<br>3:40
 Bus1.bindPopup("<b>Clayton Performing Arts Center<br>7:10am<br>12:20pm<br>4:00pm<br><a href=http://ridethet.utk.edu/wp-content/uploads/sites/51/2017/08/ORNL-PSCC-Route-Info-2017-18-Aug-17-rev.pdf>Website Link</a>");
 Bus2.bindPopup("<b>NTRC<br>7:20am<br>12:30pm<br>4:10pm<br><a href=http://ridethet.utk.edu/wp-content/uploads/sites/51/2017/08/ORNL-PSCC-Route-Info-2017-18-Aug-17-rev.pdf>Website Link</a>");
         
-TheLab.bindPopup("<b>Oak Ridge National Laboratory<br>Click on Icons for information<br>Use boxes in top right to edit search").openPopup();
+TheLab.bindPopup("<b>Oak Ridge National Laboratory");
 Y12.bindPopup("<b>Y12");
 SolwayBridge.bindPopup("<b>Solway Bridge<br>Evening Traffic");
 TurkeyCreek.bindPopup("<b>Turkey Creek Mall");
 OldCity.bindPopup("<b>Old City");
 University.bindPopup("<b>University of Tennessee");
-Tester.bindPopup("<br><a href=https://www.w3schools.com/html/>Visit our HTML tutorial</a>").openPopup();
+Tester.bindPopup("Click on Icons for information").openPopup();
 MarketSquare.bindPopup("<b>Market Square<br>Farmers Market Saturdays<br>Street Festivals");
 AppleStore.bindPopup("<b>Apple Store");
 SunSphere.bindPopup("<b>Sunsphere at Worlds Fair Park");       

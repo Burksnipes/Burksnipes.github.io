@@ -1001,7 +1001,7 @@ var runLayer = omnivore.csv('Apartment.csv')
             }));
 		Summer.addLayer(marker);
         }
-         return marker.bindPopup("<b>" + marker.toGeoJSON().properties.Title + "<br>Drive " +
+         return marker.bindPopup("<b>" + marker.toGeoJSON().properties.Title + "</b><br>Drive " +
                                  marker.toGeoJSON().properties.Drive + " Min" + "<br>Price: " + marker.toGeoJSON().properties.Price + "<br><a href=" + marker.toGeoJSON().properties.Link + ">Website Link</a>"); 
     });
 });

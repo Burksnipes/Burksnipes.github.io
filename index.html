@@ -302,6 +302,7 @@ var OneBOneB = L.layerGroup([]);
 var TwoBOneB = L.layerGroup([]);
 var TwoBTwoB = L.layerGroup([]);
 var Summer = L.layerGroup([]);
+var Furnished = L.layerGroup([]);
 var off = L.layerGroup([]);
 var geojsonFeature = {
   "type": "FeatureCollection",
@@ -1009,6 +1010,15 @@ var runLayer = omnivore.csv('Apartment.csv')
             }));
 		Summer.addLayer(marker);
         }
+	if (marker.toGeoJSON().properties.Price == 'Furnished') {
+            marker.setIcon(L.icon({
+                iconSize: [30, 50],
+                iconAnchor: [16,48],
+                popupAnchor: [-1,-34],
+                iconUrl: 'https://cdn.rawgit.com/pointhi/leaflet-color-markers/master/img/marker-icon-2x-grey.png'
+            }));
+		Furnished.addLayer(marker);
+        }
          return marker.bindPopup("<b>" + marker.toGeoJSON().properties.Title + "</b><br>Drive " +
                                  marker.toGeoJSON().properties.Drive + " Min" + "<br>Price: " + marker.toGeoJSON().properties.Price + "<br><a href=" + marker.toGeoJSON().properties.Link + ">Website Link</a>"); 
     });
@@ -1027,6 +1037,7 @@ var baselayMaps = {
     "Two Bed One Bath": TwoBOneB,
     "Two Bed Two Bath": TwoBTwoB,
     "Summer Housing": Summer,
+    "Furnished": Furnished,
     "Off": off
 };
         

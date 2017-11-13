@@ -33,7 +33,7 @@ Knox Ridge,35,Summer,https://www.knoxridge.com,35.93388,-83.937,,,
 Highland Terrace,35,Summer,http://www.livehighlandterrace.com,35.96207,-83.929,,,
 The Daniel,35,High,http://thedanielonjackson.com,35.9699,-83.9189,y,y,y
 The Enclave,20,Mid-High,http://www.theenclaveofhardinvalley.com,35.94095,-84.1616,y,,y
-West Gate Lodging,15,Furnished,http://www.westgateor.com,35.97915,-84.334,,,
+West Gate Lodging,15,Furnished,http://www.westgateor.com,35.97915,-84.334,y,,
 Windsor Court,35,Mid-Low,http://www.livewindsorcourt.com,36.01897,-83.9628,y,y,
 Woodgate,35,Mid-Low,http://woodgateapartments.net,36.02008,-83.9645,y,y,y
 The Henley,40,Mid-High,https://www.thehenleyapartments.com,35.948208,-83.910155,y,,y
@@ -41,11 +41,11 @@ Cherokee Ridge,40,Mid-Low,http://www.cherokeeridgeapts.com,35.945759,-83.908246,
 Cedar Springs,25,Mid-Low,https://www.apartments.com/cedar-springs-apartments-knoxville-tn/yyvjm5t,35.917155,-84.05816,y,y,
 Copper Pointe,25,Mid-High,http://copperpointehome.com,35.916043,-84.060726,y,y,y
 Raintree,30,Mid-High,http://liveatraintree.com,35.91087,-84.057541,,y,y
-Castlewood,25,Furnished,https://www.apartments.com/castlewood-apartments-oak-ridge-tn/cex9tgg/,36.045198,-84.210454,,,
+Castlewood,25,Furnished,https://www.apartments.com/castlewood-apartments-oak-ridge-tn/cex9tgg/,36.045198,-84.210454,y,,
 Forest Ridge,20,Mid-High,http://www.forestridgeknoxville.com/#Home,35.958634,-84.124953,y,y,y
-Extended Stay Cedar Bluff,25,Furnished,https://www.extendedstayamerica.com/hotels/tn/knoxville/cedar-bluff,35.914587,-84.101851,,,
-Extended Stay West Hills,30,Furnished,https://www.extendedstayamerica.com/hotels/tn/knoxville/west-hills,35.924439,-84.044774,,,
-Candlewood,25,Furnished,https://www.ihg.com/candlewood/hotels/us/en/knoxville/tyspd/hoteldetail?cm_mmc=GoogleMaps-_-CW-_-US-_-TYSPD,35.908225,-84.126025,,,
+Extended Stay Cedar Bluff,25,Furnished,https://www.extendedstayamerica.com/hotels/tn/knoxville/cedar-bluff,35.914587,-84.101851,y,,
+Extended Stay West Hills,30,Furnished,https://www.extendedstayamerica.com/hotels/tn/knoxville/west-hills,35.924439,-84.044774,y,,
+Candlewood,25,Furnished,https://www.ihg.com/candlewood/hotels/us/en/knoxville/tyspd/hoteldetail?cm_mmc=GoogleMaps-_-CW-_-US-_-TYSPD,35.908225,-84.126025,y,,
 Fox Lake,25,Mid-Low,https://www.foxlakeonline.com,35.930012,-84.085297,,,y
 The Element,25,Mid-Low,http://www.elementatcedarbluff.com,35.925251,-84.086558,y,y,
 The Viera,25,High,http://www.vieracedarbluff.com,35.923972,-84.093404,y,,y

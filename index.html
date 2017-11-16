@@ -199,6 +199,11 @@ var InfoIcon = L.icon({
         iconSize: [50, 50], // size of the icon
         popupAnchor: [0,-15]
         });
+var FortIcon = L.icon({
+        iconUrl: 'https://d30y9cdsu7xlg0.cloudfront.net/png/1062-200.png',
+        iconSize: [50, 50], // size of the icon
+        popupAnchor: [0,-15]
+        });
 	  
     var Centennial = L.marker([35.9987, -84.1933], {icon: orangeIcon})  
     ThePreserve = L.marker([35.9522, -84.1668], {icon: orangeIcon})
@@ -237,6 +242,7 @@ var InfoIcon = L.icon({
     AppleStore = L.marker([35.924434, -84.037232], {icon: appleIcon})
     TVATowers = L.marker([35.966389, -83.920295], {icon: TVATower})
     Stadium = L.marker([35.954897, -83.924901], {icon: Stadium})
+    FortSanders = L.marker([35.959446, -83.934591], {icon: FortIcon})
     University = L.marker([35.951756, -83.931540], {icon: universityIcon}).addTo(map)
     TheLab = L.marker([35.9311, -84.3100], {icon: blackIcon}).addTo(map)
     Y12 = L.marker([35.989341, -84.249957], {icon: Y12Logo}).addTo(map)
@@ -289,14 +295,15 @@ MarketSquare.bindPopup("<b>Market Square<br>Farmers Market Saturdays<br>Street F
 AppleStore.bindPopup("<b>Apple Store");
 SunSphere.bindPopup("<b>Sunsphere at Worlds Fair Park");       
 TVATowers.bindPopup("<b>TVA Towers");
-Stadium.bindPopup("<b>Neyland Stadium");  
+Stadium.bindPopup("<b>Neyland Stadium");
+FortSanders.bindPopup("<b>Fort Sanders");  
         
 //var OneBOneB = L.layerGroup([EightOneOne, FourOneFour, Landings, Amberleigh, Maplehurst, LovellCrossing, RollingHills,BristolPark, Centennial, ThePreserve, MarbleAlley, LondonTown, TaraHills, TheManhatten, SequoyahVillage,
 //                             WhistCourt, Tester, JFGBuilding, SterchiLoft, BrendonPark]);
 //var TwoBOneB = L.layerGroup([FourOneFour, Amberleigh, Maplehurst, RollingHills, LondonTown, TaraHills, TheManhatten, SequoyahVillage, SterchiLoft, JFGBuilding, BrendonPark]);
 //var TwoBTwoB = L.layerGroup([EightOneOne, MountainBrook, FourOneFour, Landings, Amberleigh, Maplehurst, LovellCrossing, Centennial, ThePreserve, BristolPark, MarbleAlley, WhistCourt, JFGBuilding]);
 //var Summer = L.layerGroup([TheBridge, TheCrowne, TheStandard, TheKnox, TheCommons]);
-var landmarks = L.layerGroup([AppleStore, MarketSquare, SunSphere, TurkeyCreek, OldCity, SolwayBridge, TVATowers, Stadium]);
+var landmarks = L.layerGroup([FortSanders, AppleStore, MarketSquare, SunSphere, TurkeyCreek, OldCity, SolwayBridge, TVATowers, Stadium]);
 var OneBOneB = L.layerGroup([]);
 var TwoBOneB = L.layerGroup([]);
 var TwoBTwoB = L.layerGroup([]);

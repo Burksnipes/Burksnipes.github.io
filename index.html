@@ -306,6 +306,7 @@ var TwoBTwoB = L.layerGroup([]);
 var Summer = L.layerGroup([]);
 var Furnished = L.layerGroup([]);
 var off = L.layerGroup([]);
+	  /*
 var geojsonFeature = {
   "type": "FeatureCollection",
   "features": [
@@ -916,6 +917,7 @@ var geojsonFeature = {
     }
   ]
 }
+ /*
 /* Upload Latitude/Longitude markers from data.csv file, show Title in pop-up, and override initial center and zoom to fit all in map */
  /*
    var customLayer = L.geoJson(null, {
@@ -1046,6 +1048,7 @@ var runLayer = omnivore.csv('Apartment.csv')
    omnivore.geojson('Test.geojson.txt').addTo(map); 
    //omnivore.kml('KML_Samples.kml').addTo(map);
    //omnivore.kml('DakotahLand.kml').addTo(map);
+     omnivore.ployline('Bus.txt').addTo(map);
 	/*
     var points = omnivore.csv('airports.csv', {
     icon: L.mapbox.marker.icon({
